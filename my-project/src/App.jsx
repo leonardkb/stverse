@@ -18,25 +18,37 @@ function App() {
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             {/* Launch Simulation Button */}
             <a 
-                href="https://dribbble.com/shots/25013482-Logistics-Website-Design" 
+                href="" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="bg-white text-purple-700 font-semibold py-3 px-8 rounded-full shadow-xl 
                 hover:bg-blue-500 transition duration-300 text-center"
             >
-                Launch Simulation
+                Launch VR Simulation
             </a>
 
             {/* AR Tour Button */}
-            <a 
-                href="/ar-tour-link" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="bg-white text-purple-700 font-semibold py-3 px-8 rounded-full shadow-xl 
-                hover:bg-blue-500 transition duration-300 text-center"
-            >
-                AR Tour
-            </a>
+            <a
+    href="/ar-tour-link"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-white text-purple-700 font-semibold py-3 px-8 rounded-full shadow-xl 
+              hover:bg-blue-500 transition duration-300 text-center"
+    onClick={(e) => {
+        e.preventDefault(); // Prevent default link action
+        // Open AR Tour link in a new tab
+        window.open("/ar-tour-link", "_blank", "noopener,noreferrer");
+
+        // Trigger APK download
+        const apkLink = document.createElement("a");
+        apkLink.href = "/STVerse.apk"; // replace with your APK file path
+        apkLink.download = "AR-Tour-App.apk"; // specify file name
+        apkLink.click();
+    }}
+>
+    AR Tour
+</a>
+
         </div>
     </header>
     
