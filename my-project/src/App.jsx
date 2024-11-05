@@ -18,7 +18,7 @@ function App() {
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             {/* Launch Simulation Button */}
             <a 
-                href="" 
+                href="https://sahrdaya.netlify.app/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="bg-white text-purple-700 font-semibold py-3 px-8 rounded-full shadow-xl 
